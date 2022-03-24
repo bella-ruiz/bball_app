@@ -1,16 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
+<header class="header-background">
+<h1>Top 20 NBA All Time Points Leaders</h1>
 
-<h1>Top-20 NBA All Time Points Leaders</h1>
+</header>
+<p id="tag"><b>Select an NBA player from the list.</b></p>
 
-<p>Select an NBA player from the list.</p>
+<div id="menu">
+<div class="dropdown">
+   <button type="button" class="btn dropdown-toggle btn-block" data-toggle="dropdown">
+     Select from list
+   </button>
+  <ul class="dropdown-menu btn-block">
+     {% for pair in pairs %}
+           <li class="dropdown-item btn-block"><a href="{{ url_for('detail', num=pair[0] ) }}">{{ pair[1] }}</a></li>
+     {% endfor %}
+  </ul>
+ </div>
+</div>
 
-
-<ul>
-   {% for pair in pairs %}
-       <li><a href="{{ url_for( 'detail', num=pair[0] ) }}">{{ pair[1] }}</a></li>
-   {% endfor %}
-</ul>
-
+<footer id="footer">
+<p><a href="https://unsplash.com/photos/SmQ2Cku3alc">Image source: @richard_bagan via Unsplash</a> <br>
+This is a Flask project done by Bella Ruiz for Mindy McAdams' Advanced Web Applications class.  View my GitHub repo <a href="https://github.com/bella-ruiz/bball_app">here</a></p>
+</footer>
 {% endblock %}

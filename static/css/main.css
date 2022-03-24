@@ -1,0 +1,72 @@
+h1{
+text-align: center;
+font-size: 5rem;
+font-family: 'Staatliches', 'Verdana', sans-serif;
+padding: 40px 0;
+color: #fff;
+text-shadow: 2px 2px #000;
+}
+
+h2{
+ text-align: left;
+ font-size: 2rem;
+ font-family: 'Staatliches', 'Verdana', sans-serif;
+}
+
+body {
+font-family: Arial, serif;
+}
+
+#player-name {
+ text-align: left;
+padding: 50px 0;
+color: #fff;
+font-size: 6rem;
+padding-left: 1rem;
+}
+
+#player-div{
+background-color: #000;
+color: #fff;
+padding: 1rem;
+}
+
+li {
+display: inline;
+white-space: nowrap;
+
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+  margin: auto;
+  color: #fff;
+}
+
+.header-background {
+height: 250px;
+background: url('../images/header.jpg')
+}
+
+#tag {
+text-align: center;
+background-color: #000;
+color: #fff;
+}
+
+#menu {
+background-color: #fa5614;
+}
+
+
+#footer{
+ position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+}
+
+
+a:hover {
+    color: #ff9633;
+}

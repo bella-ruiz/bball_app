@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<header class="header-background">
+<h1 id="player-name">{{ player['Name'] }}</h1>
+</header>
 
-<h1>{{ player['Name'] }}</h1>
-
-<p>This player is a {{ player['Position'] }} and is {{ player['Feet'] }} {{ player['Inches'] }} inch(es).  In an average game, he scores {{ player['PPG'] }} points, secures {{ player['RPG'] }} rebounds and tallies {{ player['APG'] }} assists.
+<div id="player-div" border>
+<h2>PLAYER STATS</h2>
+<p>This player is a {{ player['Position'] }} and is {{ player['Feet'] }}'{{ player['Inches'] }}".  In an average game, he scores {{ player['PPG'] }} points, secures {{ player['RPG'] }} rebounds and tallies {{ player['APG'] }} assists.
 </p>
 
 <p><a href="{{ player['Page'] }}">View the information for {{ player['Name'] }} here.</a></p>
 
 <!-- NOTE the way to link to a route: Use the function name -->
 <p><a href="{{ url_for('index') }}">Return to the list</a> to select a different player.</p>
+</div>
 
 {% endblock %}
