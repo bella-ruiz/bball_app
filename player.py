@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from modules import convert_to_dict
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 application = app
@@ -20,7 +21,7 @@ def detail(num):
         player_dict = players_list[int(num) - 1]
     except:
         return f"<h1>Invalid value for Player: {num}</h1>"
-    return render_template('player.html', player=player_dict, the_title=player['Name'])
+    return render_template('player.html', player=player_dict, the_title=player_dict['Name'])
 
 if __name__ == '__main__':
     app.run(debug=True)
